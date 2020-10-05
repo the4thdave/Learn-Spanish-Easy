@@ -1,7 +1,6 @@
-Learn Spanish Easy
+#Learn Spanish Easy
 
-A website created to teach the basics of Spanish such as:
-
+######A website created to teach the basics of Spanish:
 - Common Phrases
 - Masculine/Feminine Words
 - Verb conjugations

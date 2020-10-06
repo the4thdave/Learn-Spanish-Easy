@@ -4,7 +4,6 @@
 }
 
 /* Navbar Styles */ 
-/* TODO: Change to mobile hamburger menu */
 ul.topnav {
     list-style-type: none;
     top: 0;
@@ -26,34 +25,20 @@ ul.topnav li a:hover {background-color: lightgrey;}
 ul.topnav li.right {float: right;}
 
 /* Body Styles */
-.text-container {
-    position: relative;
-    height: 50%;
-    width: 280px;
-    background: rgba(255, 255, 255, 0.7);
-}
-
 .title {
     font-size: 32px;
     position: relative;
-    left: 30px;
+    text-align: center;
+    background-color: #4d94ff;
 }
 
 .subtitle {
-    font-size: 16px;
-    position: relative;
-    top: 10px;
-    left: 30px;
+    font-size: 18px;
+    position: absolute;
+    top: 80px;
+    left: 100px;
     text-align: center;
-}
-
-.button {
-    font-size: 20px;
-    position: relative;
-    top: 70px;
-    left: 30px;
     z-index: 2;
-    text-align: center;    
 }
 
 #woman {
@@ -62,6 +47,28 @@ ul.topnav li.right {float: right;}
     width: 400px;
     height: auto;
 }
+
+h2 {
+    text-align: center;
+}
+
+.card {
+    /* Add shadows to create the "card" effect */
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+    transition: 0.3s;
+    width: 120px;
+  }
+  
+  /* On mouse-over, add a deeper shadow */
+  .card:hover {
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+  }
+  
+  /* Add some padding inside the card container */
+  .card-container {
+    padding: 2px 16px;
+    text-align: center;
+  }
 
 /* Footer Styles */
 footer {
@@ -75,4 +82,11 @@ footer p {
     position: relative;
     bottom: 10px;
     transform: translate(-50%, -50%);
+}
+
+/* Media Queries */
+@media screen and (max-width: 320px) {
+    .topnav {
+        display: none;
+    }
 }

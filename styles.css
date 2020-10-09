@@ -1,27 +1,19 @@
+/* General Styles */
 * {
     margin: 0;
     padding: 0;
 }
 
-html, body {
-    height: 100%;
-}
-
-#wrapper {
-    height: auto;
+html {
     min-height: 100%;
 }
 
-/* Navbar Styles */ 
-ul.topnav {
-    list-style-type: none;
-    top: 0;
-    overflow: hidden;
+body {
+    height: 100%; 
 }
 
-ul.topnav li { float: left; }
-
-ul.topnav li a {
+/* Navbar Styles */ 
+.nav-link {
     display: block;
     color: #009933;
     text-align: center;
@@ -29,11 +21,14 @@ ul.topnav li a {
     text-decoration: none;
 }
 
-ul.topnav li a:hover {background-color: lightgrey;}
+.nav-link:hover {background-color: lightgrey;}
 
-ul.topnav li.right {float: right;}
+/* Main Content Styles */
+#wrapper {
+    height: 100%;
+    margin-bottom: 40px;
+}
 
-/* Body Styles */
 .title {
     font-size: 32px;
     position: relative;
@@ -42,18 +37,16 @@ ul.topnav li.right {float: right;}
 }
 
 .subtitle {
-    font-size: 18px;
     position: absolute;
-    top: 80px;
-    left: 100px;
+    top: 10%;
+    padding-left: 30%;
+    font-size: 18px;
     text-align: center;
     z-index: 2;
 }
 
-#woman {
-    position: relative;
-    left: -70px;
-    width: 400px;
+#main-img {
+    width: 100%;
     height: auto;
 }
 
@@ -65,10 +58,9 @@ h2 {
     display: grid;
     grid-template-columns: 1fr 1fr;
     grid-template-rows: 1fr 1fr;
-    grid-gap: 20px 0px;
+    gap: 20px 0px;
     justify-items: center;
-    position: relative;
-    top: 10px;
+    padding: 20px 0;
 }
 
 .card {
@@ -76,27 +68,40 @@ h2 {
     box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
     transition: 0.3s;
     width: 120px;
-  }
+}
 
-  /* On mouse-over, add a deeper shadow */
-  .card:hover {
+/* On mouse-over, add a deeper shadow */
+.card:hover {
     box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
-  }
+}
   
-  /* Add some padding inside the card container */
-  .card-container {
+/* Add some padding inside the card container */
+.card-container {
     padding: 2px 16px;
     text-align: center;
-  }
+}
+
+.WOTD-esp, .WOTD-eng { 
+      text-align: center;
+      padding: 5px 0;
+      font-size: 16pt;
+}
+
+#peanuts {
+      display: block;
+      margin-left: auto;
+      margin-right: auto;
+      padding-top: 10px;
+      height: 100px;
+      width: auto;
+}
 
 /* Footer Styles */
-footer { /* TODO: Fix footer bug */
+footer {
     position: absolute;
-    left: 0;
-    bottom: 0;
     text-align: center;
     width: 100%;
-    height: 50px;
+    height: 40px;
 }
 
 footer p {
@@ -105,7 +110,29 @@ footer p {
 
 /* Media Queries */
 @media screen and (max-width: 320px) {
-    .topnav {
-        display: none;
+    nav { display: none; }
+}
+
+@media screen and (min-width: 321px) and (max-width: 375px) {
+    nav { display: none; }
+
+    .grid-container {
+        padding: 20px 20px;
+    }
+}
+
+@media screen and (min-width: 376px) and (max-width: 425px) {
+    nav { display: none; }
+
+    .grid-container {
+        padding: 20px 40px;
+    }
+}
+
+@media screen and (min-width: 426px) and (max-width: 768px) {
+    nav { display: none; }
+
+    .grid-container {
+        padding: 20px 80px;
     }
 }

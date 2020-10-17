@@ -1,15 +1,26 @@
 /* General Styles */
 * {
+    box-sizing: border-box;
     margin: 0;
-    padding: 0;
 }
 
-html {
-    height: 100%;
+*:before,
+*:after {
+    box-sizing: border-box;
 }
 
+html,
 body {
-    min-height: 100%; 
+    height: 100%;
+    position: relative;
+}
+
+.page-container {
+    min-height: 100vh; /* will cover 100% of viewport */
+    overflow: hidden;
+    display: block;
+    position: relative;
+    padding-bottom: 50px; /* height of your footer */
 }
 
 header {
@@ -35,10 +46,7 @@ nav {
 .nav-link:hover {background-color: lightgrey;}
 
 /* Main Content Styles */
-#wrapper {
-    height: 100%;
-    margin-bottom: 40px;
-}
+
 
 .title {
     font-size: 28pt;
@@ -111,25 +119,25 @@ h2 {
       width: auto;
 }
 
-.phrases, .grammar, .conj, .questions, .references { padding-top: 15px; }
+article { padding-top: 15px; }
 
-.phrases p, .grammar p, .conj p, .questions p, .references p {
+article p {
     text-align: center;
     padding: 10px 5px;
 }
 
-.phrase-list, .ref-list, .conj-list, .question-list { 
+.content-list { 
     text-align: center;
     list-style-type: none;
     margin-left: 15%;
     margin-right: 15%;
 }
 
-.phrase-list li, .ref-list li, .conj-list li, .question-list li {
+.content-list li {
     padding: 5px 0;
 }
 
-.section {
+section {
     text-align: center;
     padding: 10px 0;
 }
@@ -138,9 +146,11 @@ h2 {
 /* Footer Styles */
 footer {
     position: absolute;
+    bottom: 0;
     text-align: center;
     width: 100%;
-    height: 40px;
+    height: 50px;
+    padding-top: 10px;
 }
 
 footer p {
@@ -204,7 +214,7 @@ footer p {
     }
 
     #wrapper {
-        margin: 0 15% 40px 15%;
+        margin: 0 15%;
     }
 
     .subtitle { 
@@ -229,7 +239,7 @@ footer p {
     }
 
     #wrapper {
-        margin: 0 15% 40px 15%;
+        margin: 0 15%;
     }
 
     .subtitle { 
@@ -254,7 +264,7 @@ footer p {
     }
 
     #wrapper {
-        margin: 0 15% 40px 15%;
+        margin: 0 15%;
     }
 
     .subtitle { 

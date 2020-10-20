@@ -20,45 +20,43 @@ body {
     overflow: hidden;
     display: block;
     position: relative;
-    padding-bottom: 50px; /* height of your footer */
+    padding-bottom: 60px; /* height of your footer */
 }
 
 header {
     background-color: #4d94ff;
+    display: flex;
+    align-items: center;
 }
 
 /* Navbar Styles */
 nav {
     position: absolute;
-    top: 15px;
     right: 5%;
 }
 
 .nav-link {
-    font-size: 14pt;
+    font-size: 1.25rem;
     display: inline;
-    color: black;
     text-align: center;
     padding: 0 16px;
-    text-decoration: none;
 }
 
 .nav-link:hover {background-color: lightgrey;}
 
 /* Main Content Styles */
-
-
 .title {
-    font-size: 28pt;
+    width: 100%;
+    font-size: 2.25rem;
     position: relative;
     text-align: center;
 }
 
-.subtitle {
+.subtitle { /* TODO: Make this more responsive */
     position: absolute;
     top: 10%;
     padding-left: 28%;
-    font-size: 14pt;
+    font-size: 1.125rem;
     text-align: center;
     z-index: 2;
 }
@@ -69,21 +67,17 @@ nav {
 }
 
 h2 {
+    font-size: 1.75rem;
     text-align: center;
 }
 
+/* Card Grid Styles */
 .grid-container {
     display: grid;
     grid-template-columns: 1fr 1fr;
     grid-template-rows: 1fr 1fr;
-    gap: 20px 0px;
-    justify-items: center;
+    gap: 20px 30px;
     padding: 20px 0;
-}
-
-.card-link, .title-link {
-    text-decoration: none;
-    color: black;
 }
 
 .card {
@@ -104,10 +98,19 @@ h2 {
     text-align: center;
 }
 
+.phrase-card, .conj-card {
+    grid-column: 1 / 2;
+    justify-self: end;
+}
+
+.grammar-card, .question-card {
+    grid-column: 2 / 3;
+}
+
 .WOTD-esp, .WOTD-eng { 
       text-align: center;
       padding: 5px 0;
-      font-size: 16pt;
+      font-size: 1.375rem;
 }
 
 #peanuts {
@@ -137,9 +140,20 @@ article p {
     padding: 5px 0;
 }
 
+.content-list a {
+    text-decoration: underline;
+    color: purple;
+    /* TODO: Make this look nicer */
+}
+
 section {
     text-align: center;
     padding: 10px 0;
+}
+
+a {
+    text-decoration: none;
+    color: black;
 }
 
 
@@ -149,131 +163,44 @@ footer {
     bottom: 0;
     text-align: center;
     width: 100%;
-    height: 50px;
-    padding-top: 10px;
+    height: 60px;
+    padding: 15px 0;
 }
 
 footer p {
-    font-size: 12pt;
+    font-size: 1rem;
 }
 
 /* Media Queries */
-@media screen and (max-width: 320px) {
-    nav{ display: none; }
+@media screen and (min-width: 425px) {
+    .subtitle { font-size: 1.5rem; }
 }
 
-@media screen and (min-width: 321px) and (max-width: 375px) {
-    nav{ display: none; }
-
-    .grid-container {
-        padding: 20px 20px;
+@media screen and (max-width: 767px) {
+    nav {
+        display: none;
     }
-
-    .subtitle { font-size: 16pt; }
 }
 
-@media screen and (min-width: 376px) and (max-width: 425px) {
-    nav{ display: none; }
-
-    .grid-container {
-        padding: 20px 40px;
-    }
-
-    .subtitle { font-size: 18pt; }
-}
-
-@media screen and (min-width: 426px) and (max-width: 768px) {
-    nav { display: inline; }
-
+@media screen and (min-width: 767px) {
     .title {
-        position: relative;
-        left: 5%; 
-        font-size: 30pt;
-        display: inline;
+        width: 350px;
+        left: 5%;
     }
 
-    .subtitle { 
-        font-size: 28pt;
-        top: 18%;
-        padding-left: 32%; 
-    }
-
-    .grid-container {
-        padding: 20px 200px;
-    }
+    .subtitle { font-size: 2rem; }
 }
 
-@media screen and (min-width: 769px) and (max-width: 1024px) {
-    nav { display: inline; }
-
-    .title {
-        position: relative;
-        left: 5%; 
-        font-size: 30pt;
-        display: inline;
-    }
-
+@media screen and (min-width: 1024px) {
     #wrapper {
         margin: 0 15%;
     }
-
-    .subtitle { 
-        font-size: 28pt;
-        top: 18%;
-        padding-left: 22%; 
-    }
-
-    .grid-container {
-        padding: 20px 150px;
-    }
 }
 
-@media screen and (min-width: 1025px) and (max-width: 1440px) {
-    nav { display: inline; }
-
-    .title {
-        position: relative;
-        left: 5%; 
-        font-size: 30pt;
-        display: inline;
-    }
-
-    #wrapper {
-        margin: 0 15%;
-    }
-
-    .subtitle { 
-        font-size: 28pt;
-        top: 18%;
-        padding-left: 22%; 
-    }
-
-    .grid-container {
-        padding: 20px 300px;
-    }
+@media screen and (min-width: 1440px) {
+    .subtitle { font-size: 2.5rem; }
 }
 
-@media screen and (min-width: 1441px) and (max-width: 2560px) {
-    nav { display: inline; }
-
-    .title {
-        position: relative;
-        left: 5%; 
-        font-size: 30pt;
-        display: inline;
-    }
-
-    #wrapper {
-        margin: 0 15%;
-    }
-
-    .subtitle { 
-        font-size: 36pt;
-        top: 25%;
-        padding-left: 20%; 
-    }
-
-    .grid-container {
-        padding: 20px 300px;
-    }
+@media screen and (min-width: 2560px) {
+    .subtitle { font-size: 3.75rem; }
 }

@@ -52,7 +52,7 @@ nav {
     text-align: center;
 }
 
-.subtitle { /* TODO: Make this more responsive */
+.subtitle {
     position: absolute;
     top: 10%;
     padding-left: 28%;
@@ -88,9 +88,7 @@ h2 {
 }
 
 /* On mouse-over, add a deeper shadow */
-.card:hover {
-    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
-}
+.card:hover { box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2); }
   
 /* Add some padding inside the card container */
 .card-container {
@@ -136,14 +134,11 @@ article p {
     margin-right: 15%;
 }
 
-.content-list li {
-    padding: 5px 0;
-}
+.content-list li { padding: 5px 0; }
 
 .content-list a {
     text-decoration: underline;
     color: purple;
-    /* TODO: Make this look nicer */
 }
 
 section {
@@ -167,9 +162,7 @@ footer {
     padding: 15px 0;
 }
 
-footer p {
-    font-size: 1rem;
-}
+footer p { font-size: 1rem; }
 
 /* Media Queries */
 @media screen and (min-width: 425px) {
@@ -196,13 +189,9 @@ footer p {
 }
 
 @media screen and (min-width: 1024px) {
-    #wrapper {
-        margin: 0 15%;
-    }
+    #wrapper { margin: 0 15%; }
 
-    .subtitle {
-        padding-left: 25%;
-    }
+    .subtitle { padding-left: 25%; }
 
     .grid-container {
         grid-template-columns: 1fr 1fr 1fr 1fr; 
